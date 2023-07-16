@@ -31,7 +31,7 @@ jobs:
             プレビューリンクの自動取得に失敗しました。
             "
         fi
-        cat $message > comment
+        echo $message > comment
 
     - name: Post a comment
       env:
