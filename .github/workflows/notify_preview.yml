@@ -34,4 +34,4 @@ jobs:
             "
         fi
         
-        gh pr comment -F ./comment "${URL}"
+        gh pr comment -F "${message}" "${URL}"
