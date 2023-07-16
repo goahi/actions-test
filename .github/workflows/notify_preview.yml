@@ -25,14 +25,14 @@ jobs:
             以下のリンクから${BRANCH_NAME}ブランチのプレビューを参照することができます。\n
             コミットが追加されると、プレビューも自動更新されます。\n
             \n
-            https://${link}.teaser23.pages.dev/
+            https://${link}.actions-test.pages.dev/
             "
         else
             message="
             プレビューリンクの自動取得に失敗しました。
             "
         fi
-        echo -e $message > comment
+        echo $message > comment
 
     - name: Post a comment
       env:
