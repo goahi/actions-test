@@ -22,9 +22,9 @@ jobs:
             link=${replaced,,}
 
             message="
-            以下のリンクから${BRANCH_NAME}ブランチのプレビューを参照することができます。
-            コミットが追加されると、プレビューも自動更新されます。
-
+            以下のリンクから${BRANCH_NAME}ブランチのプレビューを参照することができます。\n
+            コミットが追加されると、プレビューも自動更新されます。\n
+            \n
             https://${link}.teaser23.pages.dev/
             "
         else
@@ -32,7 +32,7 @@ jobs:
             プレビューリンクの自動取得に失敗しました。
             "
         fi
-        echo $message > comment
+        echo -e $message > comment
 
     - name: Post a comment
       env:
