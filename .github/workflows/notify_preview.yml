@@ -3,7 +3,8 @@ name: Notify the preview link for pull requests
 on:
   pull_request:
     types: [opened]
-
+permissions:
+  pull-requests: write
 jobs:
   add-comment:
     runs-on: ubuntu-latest
